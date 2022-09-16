@@ -9,11 +9,12 @@ class GildedRose {
 
     public void updateQuality() {
         for (item currentItem: items) {
-        
-            if (!currentItem.name.equals("Sulfuras, Hand of Ragnaros")) {
-                items[i].sellIn = items[i].sellIn - 1;
-            }
 
+            items[i].sellIn = items[i].sellIn - 1;
+            if (item.name.equals("Aged Brie") && item.quality < 50){
+                item.quality++;
+            }
+            
 
             if (items[i].sellIn < 0) {
                 if (!items[i].name.equals("Aged Brie")) {
