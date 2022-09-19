@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
+    // Aged Brie Tests
+
     @Test
     void testBrie() {
         Item[] items = new Item[] { new Item("Aged Brie", 5, 4) };
@@ -20,6 +22,9 @@ class GildedRoseTest {
         app.updateQuality();
         assertEquals(50, app.items[0].quality);
     }
+
+    // Regular Item Tests
+
     @Test
     void testVest() {
         Item[] items = new Item[] { new Item("Vest", 1, 10) };
@@ -34,6 +39,9 @@ class GildedRoseTest {
         app.updateQuality();
         assertEquals(8, app.items[0].quality);
     }
+
+    // Sulfuras Tests
+
     @Test
     void testSulfuras() {
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 5, 5) };
@@ -48,6 +56,9 @@ class GildedRoseTest {
         app.updateQuality();
         assertEquals(5, app.items[0].sellIn);
     }
+
+    // Conjured Item Test
+
     @Test
     void testConjuredVest() {
         Item[] items = new Item[] { new Item("Conjured vest", 5, 5) };
@@ -55,6 +66,9 @@ class GildedRoseTest {
         app.updateQuality();
         assertEquals(3, app.items[0].quality);
     }
+
+    // Backstage Pass Tests
+
     @Test
     void testBackstagePasses1() {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 11, 10) };
