@@ -42,6 +42,13 @@ class GildedRoseTest {
         assertEquals(5, app.items[0].quality);
     }
     @Test
+    void testSulfuras2() {
+        Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 5, 5) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(5, app.items[0].sellIn);
+    }
+    @Test
     void testConjuredVest() {
         Item[] items = new Item[] { new Item("Conjured vest", 5, 5) };
         GildedRose app = new GildedRose(items);
