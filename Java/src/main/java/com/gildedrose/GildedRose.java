@@ -32,12 +32,20 @@ class GildedRose {
                         items[i].quality = 0;
                     }
                 }
-                else if (items.)
-                else if (items[i].quality > 0) {
+                else if (items[i].name.contains("Conjured")){
+                    items[i].quality -= 2;
+                    if (items[i].sellIn < 0){
+                        items[i].quality -=2;
+                    }
+                }
+                else{
                     items[i].quality --;
-                    if (items[i].sellIn < 0 && items[i].quality > 0){
+                    if (items[i].sellIn < 0){
                         items[i].quality --;
                     }
+                }
+                if (items[i].quality < 0){
+                    items[i].quality = 0;
                 }
     
             }
